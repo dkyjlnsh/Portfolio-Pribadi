@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Dicky — Siswa SMK</title>
-  <meta name="description" content="Portofolio pribadi Software Engineer — proyek, keahlian, dan kontak.">
+  <title>Portofolio Dicky — Siswa SMKN 1 Binong</title>
+  <meta name="description" content="Portofolio pribadi Dicky Juliansah — Siswa SMKN 1 Binong, proyek front-end web development, keahlian, dan kontak.">
+  
+  <!-- Favicon Monogram DJ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231E262F'/><text x='50' y='67' font-family='monospace' font-weight='bold' font-size='50' fill='%23FF6B4A' text-anchor='middle'>DJ</text></svg>">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
-    <!-- Opsi Logo Teks Kustom yang pas dengan tema minimalis -->
     <a href="#hero" class="navbar__brand">
       <span class="navbar__logo-icon">&lt;/&gt;</span>
-      <span class="navbar__logo-text">WELCOME TO MY PORTOFOLIO</span>
+      <span class="navbar__logo-text">WELCOME TO MY PORTFOLIO</span>
     </a>
     <nav class="navbar__nav" id="navMenu">
       <a href="#about" class="navbar__link">Tentang</a>
       <a href="#skills" class="navbar__link">Skills</a>
       <a href="#projects" class="navbar__link">Project</a>
       <a href="#contact" class="navbar__link">Kontak</a>
-      <!-- TOMBOL SWITCH TEMA -->
-      <button class="theme-toggle" id="themeToggle" aria-label="Ubah tema warna">🌙</button>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ubah tema warna">🌙</button>
     </nav>
-    <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+    <button type="button" class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -35,14 +37,13 @@
       <div class="hero__content">
         <p class="eyebrow">HELLO SAYA</p>
         <h1 class="hero__name">Dicky Juliansah</h1>
-        <p class="hero__role">Siswa SMK</p>
+        <p class="hero__role">Siswa SMKN 1 BINONG</p>
         <p class="hero__desc">
-          "Sebagai pemula, saya memilih untuk tekun mempelajari hal mendasar terlebih dahulu. 
-          Saya terbiasa membangun antarmuka web yang sederhana, cepat, dan bersih dengan berfokus pada dasar-dasar penting:
-           HTML semantik, CSS yang efisien, dan JavaScript native."
+          Sebagai pemula, saya memilih untuk tekun mempelajari hal mendasar terlebih dahulu. 
+          Saya terbiasa membangun antarmuka web yang sederhana, cepat, dan bersih dengan berfokus pada dasar-dasar penting: 
+          HTML semantik, CSS yang efisien, dan JavaScript native.
         </p>
 
-        <!-- Signature element: status bar bergaya terminal dengan Jam -->
         <div class="status-bar">
           <span class="status-bar__dot"></span>
           <span class="status-bar__text">Menghubungkan sistem...</span>
@@ -56,7 +57,7 @@
       <div class="hero__media">
         <div class="avatar-frame">
           <div class="avatar-frame__wave"></div>
-          <img src="https://cdn.phototourl.com/free/2026-07-17-4d569def-7b69-42fd-85e7-d34c70809fc5.jpg" alt="Foto profil Dicky" class="avatar-frame__img">
+          <img src="https://cdn.phototourl.com/member/2026-11-13-cadc5e1b-72a1-4d75-acf4-edc9ea7f0efa.jpg" alt="Foto profil Dicky Juliansah" class="avatar-frame__img">
         </div>
       </div>
     </section>
@@ -66,10 +67,10 @@
       <h2 class="section__title">Tentang Saya</h2>
       <div class="about__grid">
         <p class="about__text">
-        "Saya seorang pelajar yang sedang fokus mendalami dunia front-end web development.
-        Saya senang belajar menyusun antarmuka website yang rapi, bersih, dan mudah digunakan.
-         Saat ini, fokus utama saya adalah memperkuat pemahaman dasar pada HTML semantik, CSS responsif, dan JavaScript native 
-         untuk membangun halaman web yang ringan dan terstruktur."
+          Saya seorang pelajar yang sedang fokus mendalami dunia front-end web development. 
+          Saya senang belajar menyusun antarmuka website yang rapi, bersih, dan mudah digunakan. 
+          Saat ini, fokus utama saya adalah memperkuat pemahaman dasar pada HTML semantik, CSS responsif, dan JavaScript native 
+          untuk membangun halaman web yang ringan dan terstruktur.
         </p>
       </div>
     </section>
@@ -78,20 +79,16 @@
     <section class="section" id="skills">
       <h2 class="section__title">Skills</h2>
       <div class="skills__grid">
-        <!-- Kartu Keahlian 1 -->
         <article class="skill-card">
           <h3>HTML</h3>
-          <p>Belajar membangun fondasi dan kerangka website yang rapi menggunakan elemen
-             semantik bawaan web native.</p>
+          <p>Belajar membangun fondasi dan kerangka website yang rapi menggunakan elemen semantik bawaan web native.</p>
         </article>
 
-        <!-- Kartu Keahlian 2 -->
         <article class="skill-card">
           <h3>CSS</h3>
           <p>Belajar membangun tampilan web yang bersih dan minimalis melalui pemanfaatan struktur Flexbox dan Grid dasar, dengan tetap menjaga kerapian kode tanpa tambahan library yang berlebihan.</p>
         </article>
 
-        <!-- Kartu Keahlian 3 -->
         <article class="skill-card">
           <h3>JavaScript</h3>
           <p>Memahami logika dasar pemrograman, manipulasi DOM, serta penanganan event interaktif secara native.</p>
@@ -101,7 +98,7 @@
 
     <!-- ===== PROJECTS SECTION ===== -->
     <section class="section" id="projects">
-      <h2 class="section__title">Project </h2>
+      <h2 class="section__title">Project</h2>
       <div class="projects__grid">
 
         <!-- Project 1 -->
@@ -109,14 +106,13 @@
           <div class="project-card__bar">
             <span></span><span></span><span></span>
           </div>
-          <!-- AREA FOTO BARU -->
           <div class="project-card__image">
-            <img src="https://cdn.phototourl.com/free/2026-07-16-cbf6fef3-6875-4a0f-b89c-bd18425ac96f.jpg" alt="Preview Personal Portfolio Website" loading="lazy">
+            <img src="https://cdn.phototourl.com/member/2026-11-13-d964c319-f131-4144-8950-8cbe9c82b88f.jpg" alt="Preview Website Manajemen Gudang" loading="lazy">
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Website UMKM</h3>
+            <h3 class="project-card__title">Website Manajemen Gudang</h3>
             <p class="project-card__desc">
-              Eksperimen pembuatan landing page sederhana untuk warung bakso rumahan. Proyek ini dibuat untuk belajar menyusun tata letak (layout) yang bersih dan ramah pengguna, agar promosi kuliner tradisional bisa terlihat sedikit lebih rapi di internet.
+              Proyek latihan membangun sistem pendataan inventaris berbasis web menggunakan tampilan dashboard minimalis bertema gelap. Fokus utama proyek ini adalah melatih logika pengelolaan data CRUD (Tambah, Edit, Hapus produk), fitur filter pencarian instan, serta penyajian ringkasan metrik stok dan kalkulasi nilai barang agar mudah dibaca pengguna.
             </p>
           </div>
         </article>
@@ -126,9 +122,8 @@
           <div class="project-card__bar">
             <span></span><span></span><span></span>
           </div>
-          <!-- AREA FOTO BARU -->
           <div class="project-card__image">
-            <img src="https://cdn.phototourl.com/free/2026-07-17-3b9079d4-f28d-4407-a833-f31b45497cb5.jpg" alt="Preview Terminal Style Digital Clock" loading="lazy">
+            <img src="https://cdn.phototourl.com/member/2026-11-13-b3a3ea92-660b-433a-80c4-032b162da4f9.jpg" alt="Preview Website Profil Sekolah" loading="lazy">
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Website Sekolah</h3>
@@ -166,9 +161,11 @@
         </form>
 
         <div class="social-links">
-          <a href="mailto:juliansahdicky74@email.com" class="social-link">Email &rarr;</a>
-          <a href="https://www.instagram.com/dkyjlnsh" target="_blank" class="social-link">Instagram &rarr;</a>
-          <a href="https://wa.me/628988311768" target="_blank" class="social-link">WhatsApp &rarr;</a>
+          <a href="mailto:juliansahdicky74@gmail.com" class="social-link">Email &rarr;</a>
+          <a href="https://github.com/dkyjlnsh" target="_blank" rel="noopener noreferrer" class="social-link">GitHub &rarr;</a>
+          <a href="https://www.linkedin.com/in/dicky-juliansah-262841439/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn &rarr;</a>
+          <a href="https://www.instagram.com/dkyjlnsh" target="_blank" rel="noopener noreferrer" class="social-link">Instagram &rarr;</a>
+          <a href="https://wa.me/628988311768" target="_blank" rel="noopener noreferrer" class="social-link">WhatsApp &rarr;</a>
         </div>
       </div>
     </section>

@@ -2,11 +2,11 @@
    CSS VARIABLES — token warna, font, & spacing
    ============================================ */
 :root {
-  --color-bg: #EAEFF2;          
-  --color-surface: #F4F7F9;     
-  --color-ink: #1E262F;         
+  --color-bg: #EAEFF2;
+  --color-surface: #F4F7F9;
+  --color-ink: #1E262F;
   --color-muted: #5C6E7E;
-  --color-border: #CBD6E0;      
+  --color-border: #CBD6E0;
   --color-accent: #FF6B4A;
   --color-accent-dim: #FFE4DB;
   --navbar-scroll-bg: rgba(244, 247, 249, 0.85);
@@ -84,7 +84,6 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 1px 0 var(--color-border);
 }
 
-/* Logo Styling */
 .navbar__brand {
   display: flex;
   align-items: center;
@@ -98,7 +97,7 @@ a { color: inherit; text-decoration: none; }
 }
 .navbar__logo-text {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: -0.5px;
 }
 
@@ -131,6 +130,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .theme-toggle {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   color: var(--color-ink);
@@ -142,7 +143,6 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
-  overflow: hidden; /* FIX: Supaya efek riak tombol tidak meluber keluar lingkaran */
 }
 .theme-toggle:hover {
   transform: scale(1.1);
@@ -199,7 +199,7 @@ a { color: inherit; text-decoration: none; }
   max-width: var(--container-width);
   margin: 0 auto;
 }
-.hero__content { max-width: 560px; }
+.hero__content { max-width: 560px; width: 100%; }
 .hero__name {
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1.1;
@@ -229,22 +229,30 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
-  min-width: 320px;
+  width: 100%;
+  max-width: 420px;
 }
 .status-bar__dot {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--color-accent);
   box-shadow: 0 0 0 3px var(--color-accent-dim);
+}
+.status-bar__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .status-bar__clock {
   margin-left: auto;
   font-weight: 600;
   color: var(--color-ink);
   opacity: 0.8;
+  flex-shrink: 0;
 }
-.cursor-blink { animation: blink 1s step-end infinite; color: var(--color-accent); }
+.cursor-blink { animation: blink 1s step-end infinite; color: var(--color-accent); flex-shrink: 0; }
 @keyframes blink { 50% { opacity: 0; } }
 
 .avatar-frame {
@@ -295,7 +303,7 @@ a { color: inherit; text-decoration: none; }
 .about__text { color: var(--color-muted); max-width: 620px; font-size: 1.05rem; }
 
 /* ============================================
-   SKILLS SECTION (Sebelumnya bernama Projects Card)
+   SKILLS SECTION
    ============================================ */
 .skills__grid {
   display: grid;
@@ -309,11 +317,12 @@ a { color: inherit; text-decoration: none; }
   padding: 2rem;
   transition: background var(--transition), border-color var(--transition);
 }
-.skill-card__icon {
-  font-family: var(--font-mono);
-  color: var(--color-accent);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.skill-card h3 {
+  margin-bottom: 0.6rem;
+}
+.skill-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
 }
 
 /* ============================================
@@ -332,7 +341,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   transform-style: preserve-3d;
   will-change: transform;
-  transition: transform 0.1s ease, box-shadow var(--transition), background var(--transition), border-color var(--transition);
+  transition: transform 0.15s ease, box-shadow var(--transition), background var(--transition), border-color var(--transition);
 }
 .project-card:hover { box-shadow: 0 20px 38px rgba(16, 21, 27, 0.12); }
 .project-card__bar {
@@ -340,45 +349,29 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-bg); border-bottom: 1px solid var(--color-border);
 }
 .project-card__bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--color-border); }
-.project-card__body { padding: 1.5rem; transform: translateZ(30px); }
-.project-card__title { font-size: 1.15rem; margin-bottom: 0.5rem; }
-.project-card__desc { color: var(--color-muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
-.project-card__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.project-card__tags span {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  background: var(--color-bg);
-  color: var(--color-muted);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-}
-
-  /* Styling tambahan khusus untuk foto di dalam project card */
 .project-card__image {
   width: 100%;
-  height: 180px; /* Mengunci tinggi wadah foto agar seragam */
-  overflow: hidden; /* Memotong bagian gambar yang meluber keluar */
+  height: 210px;
+  overflow: hidden;
   position: relative;
-  background: var(--color-bg); /* Placeholder warna selagi gambar dimuat */
+  background: var(--color-bg);
 }
-
 .project-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Memastikan foto proporsional & tidak gepeng/distorsi */
+  object-fit: cover;
   object-position: top center;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
-/* Efek interaksi ketika kartu di-hover */
 .project-card:hover .project-card__image img {
-  transform: scale(1.06); /* Memberikan efek zoom-in tipis yang elegan */
+  transform: scale(1.06);
 }
-
-/* Modifikasi minor: memberikan jarak pemisah yang rapi pada teks di bawah foto */
 .project-card__body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1.35rem 1.5rem 1.6rem;
+  transform: translateZ(30px);
 }
+.project-card__title { font-size: 1.15rem; margin-bottom: 0.55rem; }
+.project-card__desc { color: var(--color-muted); font-size: 0.95rem; }
 
 /* ============================================
    CONTACT SECTION
@@ -423,7 +416,6 @@ a { color: inherit; text-decoration: none; }
    RESPONSIVE MEDIA QUERIES
    ============================================ */
 @media (min-width: 640px) {
-  .about__grid { grid-template-columns: 1.3fr 1fr; }
   .skills__grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 768px) {
@@ -433,7 +425,6 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 900px) {
   .hero { flex-direction: row; justify-content: space-between; text-align: left; }
   .navbar__toggle { display: none; }
-  .projects__grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 899px) {
   .navbar__toggle { display: flex; }
