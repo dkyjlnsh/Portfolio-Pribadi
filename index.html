@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Dicky — Siswa SMKN 1 Binong</title>
+  <title>Portfolio Dicky Juliansah — Siswa SMKN 1 Binong</title>
   <meta name="description" content="Portofolio pribadi Dicky Juliansah — Siswa SMKN 1 Binong, proyek front-end web development, keahlian, dan kontak.">
   
   <!-- Favicon Monogram DJ -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231E262F'/><text x='50' y='67' font-family='monospace' font-weight='bold' font-size='50' fill='%23FF6B4A' text-anchor='middle'>DJ</text></svg>">
   
+  <!-- Google Fonts Pairing: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,9 +22,9 @@
   <header class="navbar" id="navbar">
     <a href="#hero" class="navbar__brand">
       <span class="navbar__logo-icon">&lt;/&gt;</span>
-      <span class="navbar__logo-text">WELCOME TO MY PORTFOLIO</span>
+      <span class="navbar__logo-text">Dicky.dev</span>
     </a>
-    <nav class="navbar__nav" id="navMenu">
+    <nav class="navbar__nav" id="navMenu" aria-label="Navigasi Utama">
       <a href="#about" class="navbar__link">Tentang</a>
       <a href="#skills" class="navbar__link">Skills</a>
       <a href="#projects" class="navbar__link">Project</a>
@@ -35,9 +40,9 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="hero">
       <div class="hero__content">
-        <p class="eyebrow">HELLO SAYA</p>
+        <p class="eyebrow">Halo, Saya</p>
         <h1 class="hero__name">Dicky Juliansah</h1>
-        <p class="hero__role">Siswa SMKN 1 BINONG</p>
+        <p class="hero__role">Siswa PPLG · SMKN 1 Binong</p>
         <p class="hero__desc">
           Sebagai pemula, saya memilih untuk tekun mempelajari hal mendasar terlebih dahulu. 
           Saya terbiasa membangun antarmuka web yang sederhana, cepat, dan bersih dengan berfokus pada dasar-dasar penting: 
@@ -51,7 +56,7 @@
           <span class="cursor-blink">_</span>
         </div>
 
-        <a href="#projects" class="btn btn--primary">Lihat Portfolio</a>
+        <a href="#projects" class="btn btn--primary">Lihat Portfolio &rarr;</a>
       </div>
 
       <div class="hero__media">
@@ -64,6 +69,7 @@
 
     <!-- ===== ABOUT SECTION ===== -->
     <section class="section" id="about">
+      <span class="eyebrow">Profil Singkat</span>
       <h2 class="section__title">Tentang Saya</h2>
       <div class="about__grid">
         <p class="about__text">
@@ -77,19 +83,23 @@
 
     <!-- ===== SKILLS SECTION ===== -->
     <section class="section" id="skills">
+      <span class="eyebrow">Teknologi Inti</span>
       <h2 class="section__title">Skills</h2>
       <div class="skills__grid">
         <article class="skill-card">
+          <span class="skill-card__tag">01 · Markup</span>
           <h3>HTML</h3>
           <p>Belajar membangun fondasi dan kerangka website yang rapi menggunakan elemen semantik bawaan web native.</p>
         </article>
 
         <article class="skill-card">
+          <span class="skill-card__tag">02 · Styling</span>
           <h3>CSS</h3>
           <p>Belajar membangun tampilan web yang bersih dan minimalis melalui pemanfaatan struktur Flexbox dan Grid dasar, dengan tetap menjaga kerapian kode tanpa tambahan library yang berlebihan.</p>
         </article>
 
         <article class="skill-card">
+          <span class="skill-card__tag">03 · Interactivity</span>
           <h3>JavaScript</h3>
           <p>Memahami logika dasar pemrograman, manipulasi DOM, serta penanganan event interaktif secara native.</p>
         </article>
@@ -98,10 +108,11 @@
 
     <!-- ===== PROJECTS SECTION ===== -->
     <section class="section" id="projects">
+      <span class="eyebrow">Karya Pilihan</span>
       <h2 class="section__title">Project</h2>
       <div class="projects__grid">
 
-       <!-- Project 1 -->
+        <!-- Project 1 -->
         <article class="project-card">
           <div class="project-card__bar">
             <span></span><span></span><span></span>
@@ -110,6 +121,7 @@
             <img src="assets/gudang.jpg.jpeg" alt="Preview Website Manajemen Gudang" loading="lazy">
           </div>
           <div class="project-card__body">
+            <span class="project-card__tag">HTML · CSS · JS Native</span>
             <h3 class="project-card__title">Website Manajemen Gudang</h3>
             <p class="project-card__desc">
               Proyek latihan membangun sistem pendataan inventaris berbasis web menggunakan tampilan dashboard minimalis bertema gelap. Fokus utama proyek ini adalah melatih logika pengelolaan data CRUD (Tambah, Edit, Hapus produk), fitur filter pencarian instan, serta penyajian ringkasan metrik stok dan kalkulasi nilai barang agar mudah dibaca pengguna.
@@ -126,6 +138,7 @@
             <img src="assets/sekolah.jpg.jpeg" alt="Preview Website Profil Sekolah" loading="lazy">
           </div>
           <div class="project-card__body">
+            <span class="project-card__tag">Web Profil · Responsif</span>
             <h3 class="project-card__title">Website Sekolah</h3>
             <p class="project-card__desc">
               Eksperimen kecil dalam merancang website profil sekolah yang minimalis. Dibuat menggunakan struktur kode dasar untuk menampilkan informasi dasar sekolah, program keahlian, dan tombol aksi tanpa melibatkan fungsi sistem yang terlalu rumit.
@@ -138,6 +151,7 @@
 
     <!-- ===== CONTACT SECTION ===== -->
     <section class="section" id="contact">
+      <span class="eyebrow">Kontak</span>
       <h2 class="section__title">Mari Terhubung</h2>
       <div class="contact__grid">
         <form class="contact-form" id="contactForm" novalidate>
@@ -161,6 +175,7 @@
         </form>
 
         <div class="social-links">
+          <p class="social-links__heading">Kanal Langsung</p>
           <a href="mailto:juliansahdicky74@gmail.com" class="social-link">Email &rarr;</a>
           <a href="https://github.com/dkyjlnsh" target="_blank" rel="noopener noreferrer" class="social-link">GitHub &rarr;</a>
           <a href="https://www.linkedin.com/in/dicky-juliansah-262841439/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn &rarr;</a>
